@@ -1,8 +1,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>{% if page.title %}{{ page.title }} | {% endif %}Le Moulin asbl</title>
-    <meta name="description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description[page.lang] }}{% endif %}">
+    <title>{% if entry is defined and entry.title %}{{ entry.title }} | {% endif %}Le Moulin asbl</title>
+    <meta name="description" content="">
     <link rel="stylesheet" type="text/css" href="/assets/css/font-awesome.min.css" media="all" />
     <link rel="stylesheet" type="text/css" href="/assets/css/baguetteBox.min.css" media="all" />
     <link rel="stylesheet" type="text/css" href="/assets/css/main.css" media="all" />

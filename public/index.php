@@ -1,7 +1,11 @@
 <?php
 
+require_once '../vendor/autoload.php';
+require_once 'env.php';
+
 // Path to your craft/ folder
 $craftPath = '../craft';
+define('CRAFT_LOCALE', 'fr');
 
 // Do not edit below this line
 $path = rtrim($craftPath, '/').'/app/index.php';

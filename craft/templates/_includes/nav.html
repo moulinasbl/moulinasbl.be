@@ -1,0 +1,14 @@
+{% set mainNavigation = craft.entries({
+    section: 'mainNavigation'
+}) %}
+<nav>
+	<ul>
+        {%- for menuItem in mainNavigation %}
+		    <li class="about">
+                <a href="{{ menuItem.menuLink[0].url ?? '' }}">
+                    {{ menuItem.title }}
+                </a>
+            </li>
+        {% endfor -%}
+	 </ul>
+</nav>
