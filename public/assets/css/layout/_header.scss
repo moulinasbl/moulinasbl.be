@@ -1,0 +1,104 @@
+header {
+}
+
+.name {
+	color:$headerTextColor;
+	font-family: $headerFont;
+	font-size:2em;
+	display:inline-block;
+	vertical-align:middle;
+    line-height: 1.2em;
+    padding-left: .15em;
+
+	@include mq(medium) {
+		font-size:3em;
+	}
+
+	a {
+		text-decoration:none;
+	}
+}
+
+$logo-width: 155px;
+$logo-height: 100px;
+
+.logo-link {
+    display: inline-block;
+
+    @include mq(medium)
+    {
+        float: left;
+    }
+}
+
+.logo {
+	display:inline-block;
+	position:relative;
+	vertical-align:top;
+	height: $logo-height;
+	width: $logo-width;
+
+
+	.body {
+		background:url(../img/logo_corps.png);
+		background-size:100% 100%;
+		position:absolute;
+        height: $logo-height;
+		width: $logo-width;
+		top:0;
+		left:0;
+		z-index:0;
+	}
+
+	.wings {
+		animation: spin 10s linear infinite;
+		background:url(../img/logo_ailes.png);
+		background-size:100% 100%;
+		position:absolute;
+		width:90px;
+		height:90px;
+		top:0;
+		left:12px;
+		z-index:1;
+	}
+
+	&:hover {
+		.wings {
+			animation-play-state:paused;
+		}
+	}
+}
+
+.language-switcher {
+
+    margin-bottom: 1em;
+
+	ul {
+		list-style:none;
+		margin:0;
+		padding:0;
+	}
+
+	li {
+		display:inline-block;
+	}
+
+	.selected a {
+		text-decoration: none;
+	}
+
+	@include mq(medium) {
+		float:right;
+        margin-bottom: 0;
+		padding:0 .5em .5em .5em;
+
+		li {
+			display:block;
+		}
+	}
+}
+
+/* Let's make this mill turn */
+@keyframes spin {
+	100% { transform: rotate(360deg); }
+}

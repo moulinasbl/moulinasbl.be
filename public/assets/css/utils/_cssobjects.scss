@@ -1,0 +1,24 @@
+/**
+ * CSS Media Object
+ */
+
+.media
+{
+    overflow: hidden;
+
+    &__img
+    {
+        float: left;
+        margin-right: 1em;
+    }
+
+    &__img img
+    {
+        display: block;
+    }
+
+    &__content
+    {
+        float: left;
+    }
+}

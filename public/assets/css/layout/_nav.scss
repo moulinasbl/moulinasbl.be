@@ -1,0 +1,57 @@
+nav {
+	margin:2em 0 .5em;
+
+	@include mq(medium) {
+	    margin:.5em 0;
+    }
+
+	@include mq(medium) {
+		margin:0;
+	}
+
+	ul, li {
+		margin:0;
+		padding:0;
+		list-style:none;
+	}
+
+	li {
+		font-size:1.2em;
+		display:inline-block;
+		width:50%;
+
+		@include mq(medium) {
+			font-size:1.2em;
+			width:auto;
+		}
+	}
+
+	a {
+		box-sizing:border-box;
+        background: $navItemTxtColor;
+        text-decoration: underline;
+		display:block;
+		padding:0 .4em;
+		line-height:2em;
+		text-align:center;
+		text-decoration:none;
+		transition:all .25s ease-in-out;
+		font-family:$navFont;
+		font-weight:400;
+        margin-right: .5em;
+
+		&:hover {
+			background: $blueLightestest;
+		}
+
+	}
+}
+
+.about .about,
+.news .news,
+.contact .contact,
+.team .team {
+	a {
+		border-bottom:1px solid $blueLightest;
+	}
+}
