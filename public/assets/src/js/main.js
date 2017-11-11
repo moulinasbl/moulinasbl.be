@@ -4,5 +4,4 @@
         qsa = document.querySelectorAll.bind(document);
 
     baguetteBox.run('[data-gallery]');
-    console.log('test');
 })();
