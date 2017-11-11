@@ -24,6 +24,7 @@
   "homepage": "https://github.com/moulinasbl/moulinasbl.be#readme",
   "dependencies": {},
   "devDependencies": {
+    "browser-sync": "^2.18.13",
     "node-sass": "^4.6.0",
     "nodemon": "^1.12.1"
   }
