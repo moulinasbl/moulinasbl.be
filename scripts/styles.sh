@@ -1,0 +1,1 @@
+node-sass --include-path public/assets/src/css public/assets/src/css/main.scss public/assets/dist/css/main.css

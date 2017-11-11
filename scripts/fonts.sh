@@ -1,0 +1,1 @@
+cp -rf public/assets/src/fonts public/assets/dist/

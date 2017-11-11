@@ -1,0 +1,1 @@
+nodemon -w public/assets/src/css -x "npm run styles" & nodemon -w public/assets/src/js -x "npm run js" & nodemon -w public/assets/src/images -x "npm run images" & nodemon -w public/assets/src/fonts -x "npm run fonts"

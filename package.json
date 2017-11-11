@@ -1,0 +1,30 @@
+{
+  "name": "moulinasbl.be",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "pipeline": "./scripts/pipeline.sh",
+    "watch": "./scripts/watch.sh",
+    "js": "./scripts/js.sh",
+    "images": "./scripts/images.sh",
+    "fonts": "./scripts/fonts.sh",
+    "styles": "./scripts/styles.sh"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/moulinasbl/moulinasbl.be.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/moulinasbl/moulinasbl.be/issues"
+  },
+  "homepage": "https://github.com/moulinasbl/moulinasbl.be#readme",
+  "dependencies": {},
+  "devDependencies": {
+    "node-sass": "^4.6.0",
+    "nodemon": "^1.12.1"
+  }
+}
