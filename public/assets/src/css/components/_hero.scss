@@ -1,0 +1,9 @@
+.c-hero {
+    font-size: 1.6rem;
+    text-align: center;
+    margin: 0 auto;
+
+    @include mq(large) {
+        width: 75%;
+    }
+}

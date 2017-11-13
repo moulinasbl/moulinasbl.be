@@ -27,6 +27,11 @@ strong {
 	color: $strongTxtColor;
 }
 
+em {
+    color: $mainLighter;
+    font-weight: 600;
+}
+
 h1, h2, h3 {
 	color:$headingTextColor;
 }
