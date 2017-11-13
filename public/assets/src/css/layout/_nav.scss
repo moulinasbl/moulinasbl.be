@@ -41,7 +41,7 @@ nav {
         margin-right: .5em;
 
 		&:hover {
-			background: $blueLightestest;
+			background: $mainLightestest;
 		}
 
 	}
@@ -52,6 +52,6 @@ nav {
 .contact .contact,
 .team .team {
 	a {
-		border-bottom:1px solid $blueLightest;
+		border-bottom:1px solid $mainLightest;
 	}
 }

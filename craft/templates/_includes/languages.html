@@ -1,7 +1,7 @@
 <div class="language-switcher">
 	<ul>
         {% for locale in craft.i18n.getSiteLocales() if locale.id != 'en' %}
-		    <li class="selected"><a href="/{{ locale.id }}">{{ locale.name }}</a></li>
+		    <li class="selected"><a href="/{{ locale.id }}">{{ locale.id }}</a></li>
         {% endfor %}
 	</ul>
 </div>

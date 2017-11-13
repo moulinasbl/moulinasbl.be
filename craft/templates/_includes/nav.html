@@ -3,12 +3,12 @@
 }) %}
 <nav>
 	<ul>
-        {%- for menuItem in mainNavigation %}
+        {%- for menuItem in mainNavigation -%}
 		    <li class="about">
                 <a href="{{ menuItem.menuLink[0].url ?? '' }}">
                     {{ menuItem.title }}
                 </a>
             </li>
-        {% endfor -%}
+        {%- endfor -%}
 	 </ul>
 </nav>

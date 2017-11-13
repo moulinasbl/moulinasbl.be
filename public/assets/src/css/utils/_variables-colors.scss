@@ -5,36 +5,36 @@ $color-grey: #909090;
 $black: #000000;
 $white: #FFFFFF;
 
-$blueLight: #4098B3;
-$blueLighter: mix($white, $blueLight, 20%);
-$blueLightest: mix($white, $blueLight, 80%);
-$blueLightestest: mix($white, $blueLight, 90%);
-$blueDark: mix($black, $blueLight, 50%);
-$blueDarker: mix($black, $blueLight, 60%);
+$mainLight: #1042df;
+$mainLighter: mix($white, $mainLight, 20%);
+$mainLightest: mix($white, $mainLight, 80%);
+$mainLightestest: mix($white, $mainLight, 90%);
+$mainDark: mix($black, $mainLight, 50%);
+$mainDarker: mix($black, $mainLight, 60%);
 
 $greyLight: #202020;
 
 
-$pageBgColor: $blueDark;
+$pageBgColor: $mainDark;
 
 $mainTextColor: $greyLight;
-$mainSelectedBgColor: $blueDark;
+$mainSelectedBgColor: $mainDark;
 $mainSelectedTxtColor: $white;
 
-$navItemBgColor: $blueLight;
+$navItemBgColor: $mainLight;
 $navItemTxtColor: $white;
-$navItemBorderColor: $blueDark;
-$navItemHoverBgColor: $blueLighter;
+$navItemBorderColor: $mainDark;
+$navItemHoverBgColor: $mainLighter;
 
-$strongTxtColor: $blueLight;
+$strongTxtColor: $mainLight;
 
-$headerTextColor: $blueLight;
-$headingTextColor: $blueDark;
+$headerTextColor: $mainLight;
+$headingTextColor: $mainDark;
 
-$introBgColor: $blueLightest;
-$introTxtColor: $blueDark;
+$introBgColor: $mainLightest;
+$introTxtColor: $mainDark;
 
-$footerBgColor: $blueDark;
+$footerBgColor: $mainDark;
 $footerTxtColor: $white;
 
-$linksColor: $blueLight;
+$linksColor: $mainLight;
