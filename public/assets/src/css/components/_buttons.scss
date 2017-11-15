@@ -1,0 +1,29 @@
+.g-button {
+    .c-button + .c-button {
+        margin-left: .5rem;
+    }
+}
+
+.c-button {
+    background: $mainLightest;
+    color: $mainDark;
+    font-weight: 600;
+    display: inline-block;
+    padding: .4rem 8px;
+    text-decoration: none;
+    transition: all .25s linear;
+
+    &:hover {
+        background: $mainLightestest;
+        transform: translateY(-1px);
+    }
+}
+
+.c-button--primary {
+    background: $mainLight;
+    color: $white;
+
+    &:hover {
+        background: $mainLighter;
+    }
+}

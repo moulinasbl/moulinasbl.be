@@ -1,0 +1,9 @@
+{# Get the url of a single page #}
+{% macro getSingleUrl(handle) -%}
+    {% spaceless %}
+        {% set page = craft.entries({
+        section: handle
+        })[0] ?? null %}
+        {{ page|length ? page.url : null }}
+    {% endspaceless %}
+{%- endmacro %}

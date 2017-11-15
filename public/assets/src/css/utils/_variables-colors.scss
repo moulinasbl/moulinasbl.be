@@ -2,7 +2,6 @@
 
 $color-grey: #909090;
 $color-grey2: #707070;
-$color-secondary: #751D54;
 
 $black: #000000;
 $white: #FFFFFF;
@@ -13,6 +12,8 @@ $mainLightest: mix($white, $mainLight, 80%);
 $mainLightestest: mix($white, $mainLight, 90%);
 $mainDark: mix($black, $mainLight, 50%);
 $mainDarker: mix($black, $mainLight, 60%);
+
+$color-secondary: #751D54;
 
 $greyLight: #202020;
 

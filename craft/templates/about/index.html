@@ -5,11 +5,28 @@
     <main>
         <section class="c-section">
             <div class="l-container">
-                <h1 class="title1">{{ entry.title }}</h1>
+                {% spaceless %}
+                <div class="grid">
+                    <div class="grid__module  large-span-8of12">
+                        <h1 class="title1">{{ entry.title }}</h1>
 
-                <div class="wysiwyg">
-                    {{ entry.text }}
+                        <div class="wysiwyg">
+                            {{ entry.text }}
+                        </div>
+
+                        <div class="g-button">
+                            <a href="{{ helpers.getSingleUrl('newsPage') }}" class="c-button  c-button--primary">
+                                {{ 'See our activities'|translate }}
+                            </a>
+                            <a href="{{ helpers.getSingleUrl('teamPage') }}" class="c-button">
+                                {{ 'Discover the team'|translate }}
+                            </a>
+                        </div>
+                    </div>
+                    <div class="grid__module  large-span-4of12">
+                    </div>
                 </div>
+                {% endspaceless %}
             </div>
         </section>
     </main>
