@@ -7,6 +7,8 @@
  * You can see a list of the default settings in craft/app/etc/config/defaults/general.php
  */
 
+define('BASEPATH', realpath(CRAFT_BASE_PATH . '/../'));
+
 return array(
 
 	// Base site URL
@@ -14,7 +16,8 @@ return array(
 
 	// Environment-specific variables (see https://craftcms.com/docs/multi-environment-configs#environment-specific-variables)
 	'environmentVariables' => array(
-	    'baseUrl' => getenv('GENERAL_URL'),
+	    'baseUrl'   => getenv('GENERAL_URL'),
+        'basePath'  => BASEPATH . '/public',
     ),
 
 	// Default Week Start Day (0 = Sunday, 1 = Monday...)
