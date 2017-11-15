@@ -1,0 +1,17 @@
+{% extends '_layouts/default' %}
+
+{% block content %}
+
+    <main>
+        <section class="c-section">
+            <div class="l-container">
+                <h1 class="title1">{{ entry.title }}</h1>
+
+                <div class="wysiwyg">
+                    {{ entry.text }}
+                </div>
+            </div>
+        </section>
+    </main>
+
+{% endblock %}
