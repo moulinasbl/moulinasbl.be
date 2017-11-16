@@ -16,10 +16,9 @@
                 {% spaceless %}
                 	<div class="grid">
                         {% for teamMember in teamMembers %}
-                            <div class="grid__module large-span-6of12">
+                            <div class="grid__module medium-span-6of12 large-span-4of12">
                                 {% include '_components/card-team-member' with {
-                                    fullName: teamMember.fullName,
-                                    function: teamMember.function
+                                    teamMember: teamMember
                                 } only %}
                             </div>
                         {% endfor %}

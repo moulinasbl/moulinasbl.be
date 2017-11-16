@@ -1,6 +1,15 @@
 <div class="c-team-member">
-    <h3 class="title3">{{ fullName }}</h3>
-    <p>
-        {{ function }}
-    </p>
+    <div class="media">
+        <div class="media__img">
+            {% if teamMember.profilePicture|length %}
+                <img src="{{ teamMember.profilePicture[0].getUrl({width: 100, height: 100}) }}" alt="teamMember.profilePicture[0].title">
+            {% endif %}
+        </div>
+        <div class="media__content">
+            <h3 class="title3">{{ teamMember.fullName }}</h3>
+            <p>
+                {{ teamMember.function }}
+            </p>
+        </div>
+    </div>
 </div>
