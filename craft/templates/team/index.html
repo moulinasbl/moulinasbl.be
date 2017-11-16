@@ -1,0 +1,32 @@
+{% extends "_layouts/default" %}
+
+{% block content %}
+
+    <main>
+        <section class="c-section">
+            <div class="l-container">
+                <h1 class="title1">
+                    {{ entry.title }}
+                </h1>
+
+                {% set teamMembers = craft.entries({
+                    section: 'teamMember',
+
+                }) %}
+                {% spaceless %}
+                	<div class="grid">
+                        {% for teamMember in teamMembers %}
+                            <div class="grid__module large-span-6of12">
+                                {% include '_components/card-team-member' with {
+                                    fullName: teamMember.fullName,
+                                    function: teamMember.function
+                                } only %}
+                            </div>
+                        {% endfor %}
+                    </div>
+                {% endspaceless %}
+            </div>
+        </section>
+    </main>
+
+{% endblock %}
