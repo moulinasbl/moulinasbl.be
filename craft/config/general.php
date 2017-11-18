@@ -16,6 +16,7 @@ return array(
 
 	// Environment-specific variables (see https://craftcms.com/docs/multi-environment-configs#environment-specific-variables)
 	'environmentVariables' => array(
+        'envName'   => getenv('GENERAL_ENVIRONMENT'),
 	    'baseUrl'   => getenv('GENERAL_URL'),
         'basePath'  => BASEPATH . '/public',
     ),

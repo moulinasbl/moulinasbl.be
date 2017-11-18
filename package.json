@@ -10,7 +10,8 @@
     "images": "./scripts/images.sh",
     "fonts": "./scripts/fonts.sh",
     "styles": "./scripts/styles.sh",
-    "staging": "rsync -avH --exclude=craft/storage --exclude=public/uploads --exclude=public/assets/src craft public vendor -e ssh gyroscope:/var/www/staging.moulinasbl.be/htdocs/"
+    "staging": "./scripts/staging.sh",
+    "db": "./scripts/db-dump.sh && ./scripts/db-import.sh"
   },
   "repository": {
     "type": "git",

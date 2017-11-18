@@ -1,0 +1,1 @@
+rsync -avH --exclude=craft/storage --exclude=public/uploads --exclude=public/assets/src craft public vendor -e ssh gyroscope:/var/www/staging.moulinasbl.be/htdocs/
