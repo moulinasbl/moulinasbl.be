@@ -11,6 +11,7 @@
     "fonts": "./scripts/fonts.sh",
     "styles": "./scripts/styles.sh",
     "staging": "./scripts/staging.sh",
+    "uploads": "./scripts/uploads.sh",
     "db": "./scripts/db-dump.sh && ./scripts/db-import.sh"
   },
   "repository": {

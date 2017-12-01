@@ -1,0 +1,1 @@
+export $(cat .env | grep -v ^# | xargs) && rsync -avzhPLe ssh $REMOTE_DB_TUNNEL_HOST:/var/www/staging.moulinasbl.be/htdocs/public/uploads ./public/
