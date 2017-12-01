@@ -1,0 +1,24 @@
+{% import '_macros/helpers' as helpers %}
+
+<a class="c-card-activity" href="{{ activity.url }}">
+    <div class="media">
+        <div class="media__img">
+            {% if activity.thumbnail|length %}
+                <img src="{{ activity.thumbnail[0].getUrl({width: 400}) }}" alt="{{activity.thumbnail[0].title}}">
+            {% endif %}
+        </div>
+        <div class="media__content">
+            <time>
+                {{ helpers.date(activity.dateStart) }}
+                {% if activity.dateEnd|length %}
+                    &gt;
+                    {{ helpers.date(activity.dateEnd) }}
+                {% endif %}
+            </time>
+            <h3 class="title3">{{ activity.title }}</h3>
+            <p>
+                {{ activity.teaser }}
+            </p>
+        </div>
+    </div>
+</a>

@@ -7,11 +7,21 @@
             <div class="l-container">
                 <h1 class="title1">{{ entry.title }}</h1>
 
+                {% set activities = craft.entries({
+                    section: 'activities',
+                    order: 'dateStart asc',
+                    dateStart: '>' ~ now
+                }) %}
+
                 {% spaceless %}
                 	<div class="grid">
-                        <div class="grid__module  large-span-8of12">
-
-                        </div>
+                        {% for activity in activities %}
+                            <div class="grid__module  medium-span-6of12">
+                                {% include '_components/card-activity' with {
+                                    activity: activity
+                                } only %}
+                            </div>
+                        {% endfor %}
                     </div>
                 {% endspaceless %}
 

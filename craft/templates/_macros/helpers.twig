@@ -1,3 +1,9 @@
+{# Format a date #}
+{% macro date(date) %}
+	{{- date|date('d/m/Y') -}}
+{% endmacro %}
+
+
 {# Get the url of a single page #}
 {% macro getSingleUrl(handle) -%}
     {% spaceless %}
