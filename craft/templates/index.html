@@ -12,6 +12,32 @@
             </div>
         </section>
 
+        {% set activities = craft.entries({
+            section: 'activities',
+            order: 'dateStart asc',
+            dateStart: '>' ~ now,
+            limit: 2
+        }) %}
+
+        {% if activities|length %}
+            <section class="c-section">
+                <div class="l-container">
+                    <h2 class="title2">{{ 'Our next activities'|translate }}</h2>
+
+                    {% include '_groups/activities' with {
+                        activities: activities
+                    } only %}
+
+                    <p class="u-align-center">
+                        <a href="{{ helpers.getSingleUrl('activitiesPage') }}" class="c-button c-button--primary">
+                            {{ 'See all our activities'|translate }}
+                        </a>
+                    </p>
+
+                </div>
+            </section>
+        {% endif %}
+
     </main>
 
 {% endblock %}

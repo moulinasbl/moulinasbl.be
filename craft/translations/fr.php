@@ -2,6 +2,8 @@
 
 return [
     'Read more'                         => 'Lire la suite',
+    'Our next activities'               => 'Nos prochaines activités',
+    'See all our activities'            => 'Voir toutes nos activités',
     'See our activities'                => 'Voir nos activités',
     'Discover the team'                 => 'Découvrez l’équipe',
     'When'                              => 'Quand',

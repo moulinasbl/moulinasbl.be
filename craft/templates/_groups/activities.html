@@ -1,0 +1,17 @@
+{% if activities|length %}
+    {% spaceless %}
+        <div class="grid">
+            {% for activity in activities %}
+                <div class="grid__module  large-span-6of12">
+                    {% include '_components/card-activity' with {
+                        activity: activity
+                    } only %}
+                </div>
+            {% endfor %}
+        </div>
+    {% endspaceless %}
+{% else %}
+    <p class="u-align-center">
+        {{ 'There are no upcoming activities at the moment...'|translate }}
+    </p>
+{% endif %}
