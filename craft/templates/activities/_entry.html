@@ -34,10 +34,7 @@
                             <strong>
                                 <time>
                                     {% if entry.dateEnd|length %}
-                                        {{ 'From {dateStart} to {dateEnd}'|translate({
-                                            dateStart: helpers.date(entry.dateStart),
-                                            dateEnd: helpers.date(entry.dateEnd)
-                                        }) }}
+                                        {{ helpers.dateRange(entry.dateStart, entry.dateEnd) }}
                                     {% else %}
                                         {{ helpers.date(entry.dateStart) }}
                                     {% endif %}

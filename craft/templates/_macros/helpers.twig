@@ -3,6 +3,14 @@
 	{{- date|date('d/m/Y') -}}
 {% endmacro %}
 
+{# Format a date range #}
+{% macro dateRange(dateStart, dateEnd) %}
+    {%- import _self as helpers -%}
+    {{- 'From {dateStart} to {dateEnd}'|translate({
+        dateStart: helpers.date(dateStart),
+        dateEnd: helpers.date(dateEnd)
+    }) -}}
+{% endmacro %}
 
 {# Get the url of a single page #}
 {% macro getSingleUrl(handle) -%}

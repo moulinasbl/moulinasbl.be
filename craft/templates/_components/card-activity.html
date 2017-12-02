@@ -8,13 +8,15 @@
             {% endif %}
         </div>
         <div class="media__content">
-            <time>
-                {{ helpers.date(activity.dateStart) }}
-                {% if activity.dateEnd|length %}
-                    &gt;
-                    {{ helpers.date(activity.dateEnd) }}
-                {% endif %}
-            </time>
+            <strong>
+                <time>
+                    {% if activity.dateEnd|length %}
+                        {{ helpers.dateRange(activity.dateStart, activity.dateEnd) }}
+                    {% else %}
+                        {{ helpers.date(activity.dateStart) }}
+                    {% endif %}
+                </time>
+            </strong>
             <h3 class="title3">{{ activity.title }}</h3>
             <p>
                 {{ activity.teaser }}
