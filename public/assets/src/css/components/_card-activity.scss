@@ -1,12 +1,27 @@
 .c-card-activity {
-    color: $black;
     margin-bottom: 2rem;
 
+    a {
+        color: $black;
+    }
+
     .media__img img {
-        width: 200px;
+        width: 100%;
+        margin-bottom: 1em;
     }
 
     .media__content {
-        width: 50%;
+        width: 100%;
+    }
+
+    @include mq(small) {
+        .media__img img {
+            width: 200px;
+            margin-bottom: 0;
+        }
+
+        .media__content {
+            width: 50%;
+        }
     }
 }

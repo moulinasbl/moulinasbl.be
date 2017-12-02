@@ -1,5 +1,8 @@
 {% extends "_layouts/default" %}
 
+{# Variables #}
+{% set currentSection = 'activities' %}
+
 {% block content %}
 
     <main>
@@ -13,17 +16,23 @@
                     dateStart: '>' ~ now
                 }) %}
 
-                {% spaceless %}
-                	<div class="grid">
-                        {% for activity in activities %}
-                            <div class="grid__module  medium-span-6of12">
-                                {% include '_components/card-activity' with {
-                                    activity: activity
-                                } only %}
-                            </div>
-                        {% endfor %}
-                    </div>
-                {% endspaceless %}
+                {% if activities|length %}
+                    {% spaceless %}
+                        <div class="grid">
+                            {% for activity in activities %}
+                                <div class="grid__module  large-span-6of12">
+                                    {% include '_components/card-activity' with {
+                                        activity: activity
+                                    } only %}
+                                </div>
+                            {% endfor %}
+                        </div>
+                    {% endspaceless %}
+                {% else %}
+                    <p>
+                        {{ 'There are no upcoming activities at the moment...'|translate }}
+                    </p>
+                {% endif %}
 
             </div>
         </section>

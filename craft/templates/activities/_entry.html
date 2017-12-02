@@ -1,6 +1,7 @@
 {% extends "_layouts/default" %}
 
 {# Variables #}
+{% set currentSection = 'activities' %}
 {% set activitiesPage = craft.entries({
     section: 'activitiesPage'
 })[0] ?? null %}

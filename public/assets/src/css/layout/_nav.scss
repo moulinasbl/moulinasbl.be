@@ -45,13 +45,11 @@ nav {
 		}
 
 	}
+
+    .is-current {
+        a {
+            border-bottom: 2px solid $mainLightest;
+        }
+    }
 }
 
-.about .about,
-.news .news,
-.contact .contact,
-.team .team {
-	a {
-		border-bottom:1px solid $mainLightest;
-	}
-}

@@ -1,10 +1,11 @@
+{% set currentSection = currentSection ?? '' %}
 {% set mainNavigation = craft.entries({
     section: 'mainNavigation'
 }) %}
-<nav>
+<nav role="navigation">
 	<ul>
         {%- for menuItem in mainNavigation -%}
-		    <li class="about">
+		    <li class="about {{ (currentSection == menuItem.menuId) ? 'is-current' }}">
                 <a href="{{ menuItem.menuLink[0].url ?? '' }}">
                     {{ menuItem.title }}
                 </a>

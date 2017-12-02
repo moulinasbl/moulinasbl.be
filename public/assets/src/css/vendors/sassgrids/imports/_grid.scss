@@ -20,7 +20,8 @@ $grid-gutter: 40px !default;
  *   (you might want to define media queries but not use them for grids)
 */
 
-$breakpoints: "medium"    "(min-width:46.875em)"  true,
+$breakpoints: "small"    "(min-width:31.25em)"  true,
+              "medium"    "(min-width:46.875em)"  true,
               "large"     "(min-width:71.25em)"   true !default;
 
 /*
