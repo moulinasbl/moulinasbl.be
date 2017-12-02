@@ -1,9 +1,12 @@
 html {
-	background:$pageBgColor;
+	background-color:$pageBgColor;
+
+    @include mq(medium) {
+        background-image: url('../img/logo_small.png');
+    }
 }
 
 body {
-	background:$white;
 }
 
 a {
