@@ -1,26 +1,28 @@
 {% import '_macros/helpers' as helpers %}
 
-<a class="c-card-activity" href="{{ activity.url }}">
-    <div class="media">
-        <div class="media__img">
-            {% if activity.thumbnail|length %}
-                <img src="{{ activity.thumbnail[0].getUrl({width: 400, height: 400}) }}" alt="{{activity.thumbnail[0].title}}">
-            {% endif %}
+<article class="c-card-activity">
+    <a href="{{ activity.url }}">
+        <div class="media">
+            <div class="media__img">
+                {% if activity.thumbnail|length %}
+                    <img src="{{ activity.thumbnail[0].getUrl({width: 400, height: 400}) }}" alt="{{activity.thumbnail[0].title}}">
+                {% endif %}
+            </div>
+            <div class="media__content">
+                <strong>
+                    <time>
+                        {% if activity.dateEnd|length %}
+                            {{ helpers.dateRange(activity.dateStart, activity.dateEnd) }}
+                        {% else %}
+                            {{ helpers.date(activity.dateStart) }}
+                        {% endif %}
+                    </time>
+                </strong>
+                <h3 class="title3">{{ activity.title }}</h3>
+                <p>
+                    {{ activity.teaser }}
+                </p>
+            </div>
         </div>
-        <div class="media__content">
-            <strong>
-                <time>
-                    {% if activity.dateEnd|length %}
-                        {{ helpers.dateRange(activity.dateStart, activity.dateEnd) }}
-                    {% else %}
-                        {{ helpers.date(activity.dateStart) }}
-                    {% endif %}
-                </time>
-            </strong>
-            <h3 class="title3">{{ activity.title }}</h3>
-            <p>
-                {{ activity.teaser }}
-            </p>
-        </div>
-    </div>
-</a>
+    </a>
+</article>
