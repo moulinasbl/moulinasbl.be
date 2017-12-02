@@ -10,8 +10,12 @@
 <main>
     <section class="c-section">
         <div class="l-container">
-            <strong>{{ activitiesPage.title }}</strong>
-            <h2 class="title2">{{ entry.title }}</h2>
+            <a href="{{ helpers.getSingleUrl('activitiesPage') }}">
+                <strong>{{ activitiesPage.title }}</strong>
+            </a>
+            <h2 class="title2">
+                    {{- entry.title -}}
+            </h2>
             {% spaceless %}
                 <div class="grid">
                     <div class="grid__module  medium-span-8of12">
@@ -27,6 +31,14 @@
                         <div style="clear: both; padding-top: 1em;">
                             {{ entry.text }}
                         </div>
+
+                        {% if entry.fbPageUrl|length %}
+                            <p>
+                                <a href="{{ entry.fbPageUrl }}" class="c-button c-button--primary" target="_blank" rel="noopener noreferrer">
+                                    {{ 'Event page on Facebook'|translate }}
+                                </a>
+                            </p>
+                        {% endif %}
 
                     </div>
                     <div class="grid__module  medium-span-4of12">

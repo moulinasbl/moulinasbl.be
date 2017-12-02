@@ -10,4 +10,5 @@ return [
     'Where'                             => 'Où',
     'From {dateStart} to {dateEnd}'     => 'Du {dateStart} au {dateEnd}',
     'There are no upcoming activities at the moment...'     => 'Il n’y a pas d’activité prévue en ce moment...',
+    'Event page on Facebook'            => 'Page de l’événement sur Facebook',
 ];
