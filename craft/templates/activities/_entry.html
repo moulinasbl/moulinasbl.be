@@ -31,16 +31,21 @@
                     <div class="grid__module  medium-span-4of12">
                         <div style="padding-bottom: 1em;">
                             <h3 class="title3">{{ 'When'|translate }}</h3>
-                            <time>
-                                {% if entry.dateEnd|length %}
-                                    {{ 'From {dateStart} to {dateEnd}'|translate({
-                                        dateStart: helpers.date(entry.dateStart),
-                                        dateEnd: helpers.date(entry.dateEnd)
-                                    }) }}
-                                {% else %}
-                                    {{ helpers.date(entry.dateStart) }}
-                                {% endif %}
-                            </time>
+                            <strong>
+                                <time>
+                                    {% if entry.dateEnd|length %}
+                                        {{ 'From {dateStart} to {dateEnd}'|translate({
+                                            dateStart: helpers.date(entry.dateStart),
+                                            dateEnd: helpers.date(entry.dateEnd)
+                                        }) }}
+                                    {% else %}
+                                        {{ helpers.date(entry.dateStart) }}
+                                    {% endif %}
+                                </time>
+                            </strong>
+                            {% if entry.timeExtraInfo|length %}
+                                {{ entry.timeExtraInfo }}
+                            {% endif %}
                         </div>
 
                         <div>
