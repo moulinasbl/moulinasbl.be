@@ -4,7 +4,7 @@
     <div class="media">
         <div class="media__img">
             {% if activity.thumbnail|length %}
-                <img src="{{ activity.thumbnail[0].getUrl({width: 400}) }}" alt="{{activity.thumbnail[0].title}}">
+                <img src="{{ activity.thumbnail[0].getUrl({width: 400, height: 400}) }}" alt="{{activity.thumbnail[0].title}}">
             {% endif %}
         </div>
         <div class="media__content">

@@ -1,24 +1,62 @@
-{#
- # News entry template
- # -------------------
- #
- # This template gets loaded whenever a News entry’s URL is
- # requested. That’s because the News section’s Template setting is
- # set to “news/_entry”, the path to this template.
- #
- # When this template is loaded, it will already have an ‘entry’
- # variable, set to the requested News entry.
- #
- # See this page for more details on how Craft routes requests:
- # http://craftcms.com/docs/routing
- #}
+{% extends "_layouts/default" %}
 
-{% extends "_layout" %}
+{# Variables #}
+{% set activitiesPage = craft.entries({
+    section: 'activitiesPage'
+})[0] ?? null %}
 
 {% block content %}
-	<article>
-		<h1>{{ entry.title }}</h1>
-		<p>Posted on {{ entry.postDate.format('F d, Y') }}</p>
-		{{ entry.body }}
-	</article>
+<main>
+    <section class="c-section">
+        <div class="l-container">
+            <strong>{{ activitiesPage.title }}</strong>
+            <h2 class="title2">{{ entry.title }}</h2>
+            {% spaceless %}
+                <div class="grid">
+                    <div class="grid__module  medium-span-8of12">
+
+                        {% if entry.thumbnail|length %}
+                            <img src="{{ entry.thumbnail[0].getUrl({width: 200}) }}" alt="{{ entry.thumbnail[0].title }}" class="" style="float: left; padding-right: 1em;">
+                        {% endif %}
+
+                        <div class="text-big">
+                            {{ entry.intro }}
+                        </div>
+
+                        <div style="clear: both; padding-top: 1em;">
+                            {{ entry.text }}
+                        </div>
+
+                    </div>
+                    <div class="grid__module  medium-span-4of12">
+                        <div style="padding-bottom: 1em;">
+                            <h3 class="title3">{{ 'When'|translate }}</h3>
+                            <time>
+                                {% if entry.dateEnd|length %}
+                                    {{ 'From {dateStart} to {dateEnd}'|translate({
+                                        dateStart: helpers.date(entry.dateStart),
+                                        dateEnd: helpers.date(entry.dateEnd)
+                                    }) }}
+                                {% else %}
+                                    {{ helpers.date(entry.dateStart) }}
+                                {% endif %}
+                            </time>
+                        </div>
+
+                        <div>
+                            <h3 class="title3">{{ 'Where'|translate }}</h3>
+                            <address>
+                                {{ entry.venue }}
+                                <br>
+                                {{ entry.address }}
+                                <br>
+                                {{ entry.postcode }} {{ entry.city }}
+                            </address>
+                        </div>
+                    </div>
+                </div>
+            {% endspaceless %}
+        </div>
+    </section>
+</main>
 {% endblock %}
