@@ -1,0 +1,19 @@
+.g-partners {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.c-partner {
+    margin: 0 2em 0 0;
+    padding: 0;
+    display: inline-block;
+}
+
+.c-partner:last-child {
+    margin-right: 0;
+}
+
+.c-partner__logo {
+    display: block;
+}
